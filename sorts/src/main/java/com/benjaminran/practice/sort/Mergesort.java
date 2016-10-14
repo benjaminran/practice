@@ -2,32 +2,9 @@ package com.benjaminran.practice.sort;
 
 import java.util.*;
 
-public class Solution {
+public class Mergesort {
     
-    public static void main(String[] args) {
-        ArrayList<Integer> input = new ArrayList();
-        Scanner s = new Scanner(System.in);
-        while(s.hasNextInt()) {
-            input.add(s.nextInt());
-        }
-        int[] arr = new int[input.size()];
-        for(int i=0; i<input.size(); i++) {
-            arr[i] = input.get(i);
-        }
-        System.out.print("Unsorted:");
-        for(int i=0; i<arr.length; i++) {
-            System.out.print(" " + arr[i]);
-        }
-        System.out.println();
-        mergesort(arr);
-        System.out.print("Sorted:  ");
-        for(int i=0; i<arr.length; i++) {
-            System.out.print(" " + arr[i]);
-        }
-        System.out.println();
-    }
-
-    public static int[] mergesort(int[] arr) {
+    public static int[] sort(int[] arr) {
         return mergesort(arr, 0, arr.length);
     }
 
@@ -36,7 +13,7 @@ public class Solution {
      * @param l inclusive left bound index
      * @param r exclusive right bound index
      */
-    public static int[] mergesort(int[] arr, int l, int r) {
+    private static int[] mergesort(int[] arr, int l, int r) {
         if(r - l <= 1) return arr;
         // sort halves
         int split = (l + r) / 2;

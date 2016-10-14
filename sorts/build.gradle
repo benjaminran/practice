@@ -33,7 +33,7 @@ jar {
     manifest {
         attributes(
             'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                   'Main-Class': 'com.benjaminran.practice.sort.Solution'
+                   'Main-Class': 'com.benjaminran.practice.sort.Main'
         )
     }
 }
