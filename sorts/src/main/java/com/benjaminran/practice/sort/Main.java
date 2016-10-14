@@ -19,7 +19,7 @@ class Main {
         }
         System.out.println();
 
-        Quicksort.sort(arr);
+        Heapsort.sort(arr);
 
         System.out.print("Sorted:  ");
         for(int i=0; i<arr.length; i++) {
