@@ -11,16 +11,16 @@ class Main {
         while(s.hasNextInt()) {
             input.add(s.nextInt());
         }
-        int[] arr = new int[input.size()];
-        for(int i=0; i<input.size(); i++) {
-            arr[i] = input.get(i);
-        }
+        Integer[] arr = new Integer[input.size()];
+        input.toArray(arr);
         System.out.print("Unsorted:");
         for(int i=0; i<arr.length; i++) {
             System.out.print(" " + arr[i]);
         }
         System.out.println();
-        Mergesort.sort(arr);
+
+        Quicksort.sort(arr);
+
         System.out.print("Sorted:  ");
         for(int i=0; i<arr.length; i++) {
             System.out.print(" " + arr[i]);

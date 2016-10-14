@@ -1,2 +1,2 @@
-# mergesort
-A practice mergesort implementation
+# sorts
+Java implementations of sorting algorithms
